@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #000022;
+    background-color: #183f88;
 }
 
 .card {
@@ -58,7 +58,7 @@ body {
 }
 
 .front {
-    background-color: #BE0F04;
+    background-color: #00fd94;
     z-index: 1;
 }
 
@@ -140,8 +140,8 @@ body {
 .back {
     background: linear-gradient(
         to right,
-        #BE0F04 50%,
-        #7d0b03
+        #00fd94 50%,
+        #0e925b
     );
     transform: rotateY(180deg);
 }
@@ -149,24 +149,57 @@ body {
 .inside {
     background: linear-gradient(
         to left,
-        #BE0F04 50%,
-        #7d0b03
+        #00fd94 50%,
+        #0e925b
     );
     font-family: 'Parisienne', cursive;
-    color: white;
-    font-size: 70px;
+    color: black;
+    font-size: 32px;
     text-align: center;
     line-height: 100px;
-    padding: 90px 10px;
+    padding: 20px 5px;
     box-shadow: 25px 25px 35px rgba(0, 0, 0, 0.3);
     transition: 2s;
 }
 
 .inside > p {
-    border-bottom: 10px dotted white;
+    border-bottom: 5px dotted white;
 }
 
 
 .card:hover {
     animation: bounce 1s ease;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.custom-image {
+    position: absolute;
+    width: 100px;
+    top: 50px;
+    left: 50px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+.imgbox {
+    display: grid;
+    height: 100%;
+}
+.center-fit {
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 100%;
 }
